@@ -2,12 +2,12 @@
 export default function App() {
   return (
     <div className="App">
-     <Logo />;
-     <Form />;
-     <PackingList />;
+     <Logo />
+     <Form />
+     <PackingList />
      <Stats />
     </div>
-  );
+  )
 }
 
 function Logo(){
@@ -19,7 +19,7 @@ function Form(){
     <div className='add-form'>
       <h3>What do you need for your trip?</h3>
     </div>
-  );
+  )
 }
 
 function PackingList(){
