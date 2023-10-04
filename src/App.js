@@ -3,9 +3,6 @@ const initialItems = [
   {id: 2, description: "Socks", quantity: 12, packed: false},
 ]
 
-
-
-
 export default function App() {
   return (
     <div className="App">
@@ -31,20 +28,20 @@ function Form(){
 
 function PackingList(){
   return <ul className='list'>
-    {initialItems.map((items) => (
+    {initialItems.map((item) => (
       <item item={item} />
     ))}
   </ul>;
-
 }
 
 function item({item}){
-  return <li>{item.description}</li>
+  return <li>
+    <span style={item.packed ? {textDecoration: "line-through"} : {}}>
+      {item.quantity}{item.description}
+    </span>
+    <button>X</button>
+    </li>
 }
-
-
-
-
 
 function Stats(){
   return <footer className='stats'>
